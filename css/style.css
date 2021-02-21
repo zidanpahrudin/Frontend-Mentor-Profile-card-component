@@ -1,0 +1,133 @@
+/*******Variable*******/
+:root {
+  /*responsive point*/
+  --point-mobile: 375px;
+  --point-desktop: 1440px;
+
+  /*color variable*/
+  --bg-white: #fff;
+  --color-primer: hsl(185, 75%, 39%);
+  --font-clr-primer: hsl(229, 23%, 23%);
+  --font-clr-sekunder: hsl(0, 0%, 59%);
+}
+
+/*******Reset*******/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*******style body*******/
+body {
+  position: relative;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-primer);
+  font-family: "Kumbh Sans", sans-serif;
+  color: var(--font-clr-primer);
+}
+
+body::after {
+  content: url("../images/bg-pattern-top.svg");
+  position: absolute;
+  right: 15em;
+  bottom: 15em;
+  opacity: 0.5;
+}
+body::before {
+  content: url("../images/bg-pattern-bottom.svg");
+  position: absolute;
+  top: 18em;
+  left: 14em;
+}
+@media screen and (min-width: 600px) {
+  body::after {
+    content: url("../images/bg-pattern-top.svg");
+    position: absolute;
+    right: 40em;
+  }
+  body::before {
+    content: url("../images/bg-pattern-bottom.svg");
+    position: absolute;
+    top: 18em;
+    left: 42em;
+  }
+}
+
+/*******style card*******/
+.card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  height: 25rem;
+  overflow: hidden;
+  background-color: var(--bg-white);
+  border-radius: 0.9rem;
+  box-shadow: 3px 18px 12px rgba(0, 0, 0, 0), 5px 25px 25px rgba(0, 0, 0, 0.1);
+}
+.card::before {
+  position: absolute;
+  content: url("../images/bg-pattern-card.svg");
+}
+.container {
+  margin-top: 5em;
+}
+
+/*******style author*******/
+.author {
+  position: relative;
+  left: 1.5rem;
+  background-color: var(--bg-white);
+  border-radius: 100px;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.author img {
+  left: 0.25em;
+  top: 0.25em;
+  position: relative;
+  border-radius: 100px;
+}
+.info-author {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.1em;
+}
+.info-author h2 {
+  font-size: 1.2em;
+}
+.info-author p {
+  color: var(--font-clr-sekunder);
+}
+.info-author span {
+  margin-left: 0.3em;
+}
+
+/*******style footer*******/
+footer {
+  margin-top: 2em;
+  display: flex;
+  gap: 3em;
+}
+footer h2 {
+  font-size: 1.2em;
+}
+span {
+  font-weight: 300;
+  color: var(--font-clr-sekunder);
+}
+footer h2 span {
+  text-align: center;
+  margin-top: 0.6em;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  display: block;
+}
